@@ -1,2 +1,50 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!-- home.hbs -->
+<div class="container">
+  <header>
+    <h1>MS FABRIC</h1>
+    <div class="admin-icon">ADMIN</div>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Employee details</a></li>
+      <li><a href="#">Attendance</a></li>
+      <li><a href="#">Monthly salary calculation</a></li>
+      <li><a href="#">Work site management</a></li>
+      <li><a href="#">Expense Management</a></li>
+      <li><a href="#">Client payment</a></li>
+      <li><a href="#">Profit</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>MS FABRIC ENGINEERING</h2>
+    <p>FOR YOUR BUSINESS</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="icon yellow">&#9633;</div>
+        <h3>Choose Destination</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor
+          tempus.</p>
+      </div>
+      <div class="feature">
+        <div class="icon orange">&#9673;</div>
+        <h3>Make Payment</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor
+          tempus.</p>
+      </div>
+    </div>
+
+    <div class="destinations">
+      {{#each locations}}
+        <div class="destination">
+          <img src="path_to_{{this}}_image.jpg" alt="{{this}}" />
+          <p>{{this}}</p>
+        </div>
+      {{/each}}
+    </div>
+
+  </main>
+</div>

@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'First Page' });
+  res.render('index', { locations: ['Cochin', 'Trivandrum', 'Kothamangalam'] });
 });
 
 module.exports = router;
