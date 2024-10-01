@@ -1,50 +1,80 @@
-<!-- home.hbs -->
-<div class="container">
-  <header>
-    <h1>MS FABRIC</h1>
-    <div class="admin-icon">ADMIN</div>
-  </header>
+  <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/employee">Employee details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Attendance</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Monthly salary calculation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Work site management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Expense Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Client payment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profit</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Employee details</a></li>
-      <li><a href="#">Attendance</a></li>
-      <li><a href="#">Monthly salary calculation</a></li>
-      <li><a href="#">Work site management</a></li>
-      <li><a href="#">Expense Management</a></li>
-      <li><a href="#">Client payment</a></li>
-      <li><a href="#">Profit</a></li>
-    </ul>
-  </nav>
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">MS FABRIC</h1>
+                    <div class="admin-icon">ADMIN</div>
+                </div>
 
-  <main>
-    <h2>MS FABRIC ENGINEERING</h2>
-    <p>FOR YOUR BUSINESS</p>
+                <h2>MS FABRIC ENGINEERING</h2>
+                <p class="lead">FOR YOUR BUSINESS</p>
 
-    <div class="features">
-      <div class="feature">
-        <div class="icon yellow">&#9633;</div>
-        <h3>Choose Destination</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor
-          tempus.</p>
-      </div>
-      <div class="feature">
-        <div class="icon orange">&#9673;</div>
-        <h3>Make Payment</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor
-          tempus.</p>
-      </div>
-    </div>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon yellow mb-3">&#9633;</div>
+                                <h3 class="card-title">Choose Destination</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon orange mb-3">&#9673;</div>
+                                <h3 class="card-title">Make Payment</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="destinations">
-      {{#each locations}}
-        <div class="destination">
-          <img src="path_to_{{this}}_image.jpg" alt="{{this}}" />
-          <p>{{this}}</p>
+                <div class="row">
+                    {{#each locations}}
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="path_to_{{this}}_image.jpg" class="card-img-top" alt="{{this}}">
+                                <div class="card-body">
+                                    <p class="card-text">{{this}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </main>
         </div>
-      {{/each}}
     </div>
-
-  </main>
-</div>
